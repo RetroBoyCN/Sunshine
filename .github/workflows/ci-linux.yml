@@ -44,7 +44,6 @@ jobs:
             libdrm-dev \
             libfuse2 \
             libgl-dev \
-            libwayland-dev \
             libx11-xcb-dev \
             libxcb-dri3-dev \
             libxfixes-dev
@@ -67,7 +66,7 @@ jobs:
             --enable-drm \
             --enable-x11 \
             --enable-glx \
-            --enable-wayland \
+            --disable-wayland \
             --without-legacy
           make -j "$(nproc)"
           sudo make install
